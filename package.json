@@ -1,0 +1,11 @@
+{
+  "name": "scissor-and-style",
+  "private": true,
+  "scripts": {
+    "start": "node init && node server.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.4",
+    "express": "^4.21.0"
+  }
+}

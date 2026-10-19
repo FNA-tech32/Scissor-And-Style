@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scissor&amp;Style — Premium Hair Salon</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">Scissor<span>&amp;Style</span></a>
+      <div class="nav-links" id="desktopNav">
+        <a href="#services">Services</a>
+        <a href="#why-us">Why Us</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#cta" class="nav-cta">Book Now</a>
+      </div>
+      <!-- Hamburger -->
+      <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#services">Services</a>
+      <a href="#why-us">Why Us</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#cta" class="mobile-cta">Book Now</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-split">
+      <div class="hero-container">
+        <span class="hero-badge animate-on-scroll">Premium Hair Salon</span>
+        <h1 class="animate-on-scroll">Your Destination for <span class="highlight">Beautiful Hair</span></h1>
+        <p class="animate-on-scroll">Experience expert styling, coloring, and treatments tailored to you. Book instantly with our AI voice assistant — just talk, and we'll find the perfect time.</p>
+        <div class="hero-buttons animate-on-scroll">
+          <a href="#services" class="btn btn-secondary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/></svg>
+            View Services
+          </a>
+          <button class="btn btn-primary btn-glow" onclick="startVoiceCall()">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="22"/></svg>
+            Book by Voice
+          </button>
+        </div>
+      </div>
+      <div class="hero-images animate-on-scroll">
+        <div class="hero-img-grid">
+          <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600&h=750&fit=crop" alt="Salon styling" class="hero-img hero-img-main" loading="eager" />
+          <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=300&h=360&fit=crop" alt="Hair coloring" class="hero-img hero-img-small" loading="eager" />
+          <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=300&h=360&fit=crop" alt="Hair treatment" class="hero-img hero-img-small" loading="eager" />
+        </div>
+      </div>
+    </div>
+    <div class="hero-decoration">
+      <div class="hero-gradient-1"></div>
+      <div class="hero-gradient-2"></div>
+      <div class="hero-gradient-3"></div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="stats">
+    <div class="stats-grid animate-on-scroll">
+      <div class="stat-item">
+        <span class="stat-number">10+</span>
+        <span class="stat-label">Services</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">Expert</span>
+        <span class="stat-label">Stylists</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">9am–6pm</span>
+        <span class="stat-label">Tue–Sun</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">24/7</span>
+        <span class="stat-label">AI Booking</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="services-section">
+    <div class="section-container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Our Menu</span>
+        <h2 class="section-title">Services & Pricing</h2>
+        <p class="section-description">From precision cuts to stunning color transformations, we offer a full range of hair services to help you look and feel your best.</p>
+      </div>
+      <div class="services-grid animate-on-scroll" id="services-grid"></div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="gallery-section">
+    <div class="section-container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Our Work</span>
+        <h2 class="section-title">Transformations & Style</h2>
+        <p class="section-description">A glimpse of the artistry our stylists bring to every appointment.</p>
+      </div>
+      <div class="gallery-grid animate-on-scroll">
+        <div class="gallery-item gallery-tall">
+          <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=600&h=800&fit=crop" alt="Balayage hair coloring" loading="lazy" />
+          <div class="gallery-overlay"><span>Balayage</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=500&h=400&fit=crop" alt="Precision haircut" loading="lazy" />
+          <div class="gallery-overlay"><span>Precision Cut</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=500&h=400&fit=crop" alt="Blowout styling" loading="lazy" />
+          <div class="gallery-overlay"><span>Blowout</span></div>
+        </div>
+        <div class="gallery-item gallery-tall">
+          <img src="https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?w=600&h=800&fit=crop" alt="Hair styling" loading="lazy" />
+          <div class="gallery-overlay"><span>Styling</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1634449571010-02389ed0f9b0?w=500&h=400&fit=crop" alt="Keratin treatment" loading="lazy" />
+          <div class="gallery-overlay"><span>Keratin Treatment</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1522338242992-e1a54906a8da?w=500&h=400&fit=crop" alt="Hair highlights" loading="lazy" />
+          <div class="gallery-overlay"><span>Highlights</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Us -->
+  <section id="why-us" class="features-section">
+    <div class="section-container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Why Scissor&amp;Style</span>
+        <h2 class="section-title">The Scissor&amp;Style Experience</h2>
+        <p class="section-description">We combine expert craftsmanship with modern convenience to make every visit exceptional.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card animate-on-scroll">
+          <div class="feature-icon-wrap"><div class="feature-icon">🤖</div></div>
+          <h3>AI Voice Booking</h3>
+          <p>Book appointments by simply talking to our AI assistant. Check availability and confirm in seconds.</p>
+        </div>
+        <div class="feature-card animate-on-scroll">
+          <div class="feature-icon-wrap"><div class="feature-icon">✂️</div></div>
+          <h3>Expert Stylists</h3>
+          <p>Our team of skilled professionals stays current with the latest trends and techniques.</p>
+        </div>
+        <div class="feature-card animate-on-scroll">
+          <div class="feature-icon-wrap"><div class="feature-icon">💎</div></div>
+          <h3>Premium Products</h3>
+          <p>We use only top-quality, salon-grade products for every service we provide.</p>
+        </div>
+        <div class="feature-card animate-on-scroll">
+          <div class="feature-icon-wrap"><div class="feature-icon">🕐</div></div>
+          <h3>Flexible Hours</h3>
+          <p>Open 9 AM to 6 PM, Tuesday through Sunday. Closed Mondays.</p>
+        </div>
+        <div class="feature-card animate-on-scroll">
+          <div class="feature-icon-wrap"><div class="feature-icon">📅</div></div>
+          <h3>Easy Scheduling</h3>
+          <p>Convenient 1-hour appointment slots with real-time availability checking.</p>
+        </div>
+        <div class="feature-card animate-on-scroll">
+          <div class="feature-icon-wrap"><div class="feature-icon">💖</div></div>
+          <h3>Personalized Care</h3>
+          <p>Every service is tailored to your unique hair type, texture, and personal style goals.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Book CTA Banner -->
+  <section class="book-banner" style="background-image:url('https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=1600&h=500&fit=crop');">
+    <div class="book-banner-overlay"></div>
+    <div class="section-container">
+      <div class="banner-content animate-on-scroll">
+        <div class="banner-text">
+          <h3>Ready to book?</h3>
+          <p>Talk to Nina, our AI assistant, and she'll find the perfect appointment for you.</p>
+        </div>
+        <button class="btn btn-primary btn-glow" onclick="startVoiceCall()">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="22"/></svg>
+          Book by Voice
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="reviews" class="testimonials-section">
+    <div class="section-container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Client Love</span>
+        <h2 class="section-title">What Our Clients Say</h2>
+        <p class="section-description">Don't just take our word for it — hear from the people who trust us with their hair.</p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card animate-on-scroll">
+          <div class="stars">★★★★★</div>
+          <p>"Absolutely love my balayage! The color is exactly what I wanted. The AI booking was so easy — I just told it when I was free and it found the perfect slot."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">S</div>
+            <div>
+              <strong>Sarah M.</strong>
+              <span class="verified">Verified Client</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card animate-on-scroll">
+          <div class="stars">★★★★★</div>
+          <p>"Best men's cut I've ever had. The stylist really listened to what I wanted. Booking through the voice assistant was surprisingly smooth."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">J</div>
+            <div>
+              <strong>James K.</strong>
+              <span class="verified">Verified Client</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card animate-on-scroll">
+          <div class="stars">★★★★★</div>
+          <p>"The keratin treatment transformed my hair! It's so smooth and manageable now. The salon has a wonderful atmosphere and the team is incredibly professional."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">L</div>
+            <div>
+              <strong>Lisa T.</strong>
+              <span class="verified">Verified Client</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="cta" class="cta-section">
+    <div class="section-container">
+      <div class="cta-content animate-on-scroll">
+        <h2>Ready for Your <span class="highlight-light">New Look?</span></h2>
+        <p>Book your appointment in seconds by talking to our AI assistant. Just tell Nina when you're available, and she'll handle the rest.</p>
+        <button class="btn btn-primary btn-large btn-glow" onclick="startVoiceCall()">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="22"/></svg>
+          Book Now by Voice
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#" class="logo">Scissor<span>&amp;Style</span></a>
+          <p>Premium hair salon with AI-powered booking.</p>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <p>214 Maple Street<br />Portland, OR 97205</p>
+          <p><a href="tel:+15035550192">(503) 555-0192</a></p>
+          <p><a href="mailto:book@scissorandstyle.com">book@scissorandstyle.com</a></p>
+          <p>Tue–Sun, 9:00 AM – 6:00 PM<br />Closed Mondays</p>
+        </div>
+        <div class="footer-links">
+          <a href="#services">Services</a>
+          <a href="#why-us">About</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#cta">Book Now</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Scissor&amp;Style. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Assistant Popup -->
+  <div class="assistant-popup" id="assistantPopup">
+    <div class="assistant-header">
+      <div class="assistant-info">
+        <div class="assistant-avatar">N</div>
+        <div>
+          <strong>Nina</strong>
+          <span>AI Salon Assistant</span>
+        </div>
+      </div>
+      <div class="assistant-tabs">
+        <button class="tab-btn active" data-tab="chat" id="chatTabBtn">Chat</button>
+        <button class="tab-btn" data-tab="talk" id="talkTabBtn">Talk</button>
+      </div>
+      <button class="close-btn" id="closeAssistant">&times;</button>
+    </div>
+
+    <div class="assistant-body" id="chatTab">
+      <div class="chat-messages" id="chatMessages">
+        <div class="message nina">
+          <div class="message-avatar">N</div>
+          <div class="message-bubble">Hi! I'm Nina, your AI salon assistant. I can help with services, pricing, and hair care tips. Want to book? Click the <strong>Talk</strong> tab to speak with me!</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="assistant-body hidden" id="talkTab">
+      <div class="talk-content">
+        <div class="talk-avatar-container">
+          <div class="talk-avatar">N</div>
+        </div>
+        <p class="talk-description">Talk to Nina to check availability and book your appointment instantly.</p>
+        <button class="btn btn-primary" id="startTalkBtn" onclick="startVoiceCall()">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="22"/></svg>
+          Start Voice Call
+        </button>
+      </div>
+    </div>
+
+    <div class="assistant-footer" id="chatFooter">
+      <div class="quick-chips">
+        <button class="chip" onclick="sendQuickQuestion('What services do you offer?')">Services?</button>
+        <button class="chip" onclick="sendQuickQuestion('How do I book an appointment?')">Book appointment</button>
+        <button class="chip" onclick="sendQuickQuestion('What coloring options do you have?')">Coloring options</button>
+      </div>
+      <div class="chat-input-container">
+        <input type="text" id="chatInput" placeholder="Ask about our services..." />
+        <button id="sendBtn" onclick="sendMessage()">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Assistant Button -->
+  <button class="fab" id="fabBtn" aria-label="Chat with Nina">
+    <div class="fab-avatar">N</div>
+  </button>
+
+  <!-- Voice Call Modal -->
+  <div class="voice-modal" id="voiceModal">
+    <div class="voice-modal-content">
+      <div class="voice-avatar-container">
+        <div class="voice-avatar" id="voiceAvatar">N</div>
+        <div class="ripple ripple-1" id="ripple1"></div>
+        <div class="ripple ripple-2" id="ripple2"></div>
+        <div class="ripple ripple-3" id="ripple3"></div>
+      </div>
+      <h3 class="voice-name">Nina</h3>
+      <p class="voice-role">AI Salon Assistant</p>
+      <p class="voice-status" id="voiceStatus">Connecting...</p>
+      <p class="voice-timer" id="voiceTimer">00:00</p>
+      <button class="hangup-btn" id="hangupBtn" onclick="endVoiceCall()">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.68 13.31a16 16 0 0 0 3.41 2.6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7 2 2 0 0 1 1.72 2v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91"/><line x1="23" y1="1" x2="1" y2="23"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
